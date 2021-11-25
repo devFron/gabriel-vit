@@ -3,3 +3,7 @@ this proyect is a portfolio from José Gabriel Vit García
 
 - [History](#history)
 - [Objectives](#objectives)
+
+## History
+This project already has a version which I have decided to abandon because personally the structure of folders and branches of the project were beginning to become very complex and not very sustainable.
+so I have decided to start a new one which will begin a series of [objectives](#objectives) which I have decided to be like this in order to strengthen my skills as a web developer
