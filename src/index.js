@@ -1,3 +1,3 @@
 import App from './App.js'
-document.addEventListener('DOMContentLoaded',(e)=>App())
-window.addEventListener('hashchange',(e)=>App())
+document.addEventListener('DOMContentLoaded',async(e)=>await App())
+window.addEventListener('hashchange',async(e)=>await App())
