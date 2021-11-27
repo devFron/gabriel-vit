@@ -35,5 +35,27 @@ const Styles = (stylesSet)=>{
             ExtraLarge += 'null'
         }
     }     
+    
+    return `
+        ${Mobile.replace(/null/g, '')}
+        @media screen and (min-width:480px) {
+            /* Begin Tablet */
+            ${Tablet.replace(/null/g, '')}
+        }
+         @media screen and (min-width:770px) {
+            /*Begin Laptop */
+            ${Laptop.replace(/null/g, '')}
+
+        } 
+         @media screen and (min-width:1025px) {
+            /*Begin Desktop */
+            ${Desktop.replace(/null/g, '')}
+        } 
+          @media screen and (min-width:1201px) {
+            /* begin TV */
+            ${ExtraLarge.replace(/null/g, '')}
+
+        }  
+    `
 }
 export default Styles
