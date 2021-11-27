@@ -3,9 +3,9 @@ import Router from './router.js'
 const App = async ()=>{
     const $ROOT = document.getElementById('root') 
     const $Loader = document.createElement('div')
-    $Loader.appendChild(Loader())
+    $Loader.appendChild(Loader()[0])
     $ROOT.insertAdjacentElement('beforebegin',$Loader)
     await Router()
-    $Loader.style.display = 'none'
+    $Loader.style.display='none'
 }
 export default App
