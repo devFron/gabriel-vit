@@ -9,6 +9,64 @@ const Loader = ()=>{
         <path id='steamL' d='M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke='#ffff'/>
         <path id='steamR' d='M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13' stroke='#ffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
     `
-    return Loader
+    return [Loader,{
+        mobile:`
+        .loader__box{
+            background:rgba(0, 0, 0, 0.616);
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+        #teabag{
+            transform-origin: top center;
+            transform: rotate(3deg);
+            animation: swing 2s infinite
+        }
+        #steamL{
+            stroke-dasharray: 13;
+            stroke-dashoffset: 13;
+            animation: steamLarge 2s infinite;
+        }
+        #steamR{
+            stroke-dasharray: 9;
+            stroke-dashoffset: 9;
+            animation: steamSmall 2s infinite;
+        }
+        @keyframes swing{
+            50%{
+                transform: rotate(-3deg)
+            }
+        }
+        @keyframes steamLarge{
+            0%{
+                stroke-dashoffset: 13;
+                opacity: .6;
+            }
+            100%{
+                stroke-dashoffset: 39;
+                opacity: 0;
+            }
+        }
+        @keyframes steamSmall{
+            10%{
+                stroke-dashoffset: 9;
+                opacity: .6;
+            }
+            80%{
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+            100%{
+              stroke-dashoffset: 27;
+              opacity: 0;
+            }
+        }
+        `,
+    }]
 }
 export default Loader
