@@ -1,60 +1,5 @@
 const Header = ()=>{
-    const styles = `
-    header{
-        background:#eee;
-        position:fixed;
-        bottom:0;
-        left:0;
-        right:0;
-        display:flex;
-        align-items:center;
-        justify-content: center;
-        padding:3rem 0 0 0;
-        border-radius:3rem 3rem 0 0;
-    
-    }
-    header>.logo{
-        display:none;
-    }
-    header>nav{
-        width:100%;
-    }
-    header>nav>.menu{
-        display:flex;
-        list-style:none;
-        margin:0;
-        padding:0;
-        justify-content: space-between;
-        padding:0 1rem;
-    }
-    .menu__link{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 500;
-        text-decoration:none;
-        color:#2B2C34;
-    }
-    .menu__item{
-        padding:0 0 1rem 0;
-    }
-    .dark-mode__swich{
-        position:absolute;
-        background:red;
-        top:-25%;
-        background:#fff;
-        padding:1rem 1.50rem;
-        border-radius:50%;
-        color:#2B2C34;
-    }
-    .dark-mode__swich>.icon__moon,.icon__sun{
-        font-size:40px;
-        cursor:pointer;
-    }
-    .dark-mode__swich>.icon__moon{
-        display: none;
-    }
-    `
+
     const $Header = document.createElement('header')
     const $Logo = document.createElement('img')
     const $Nav = document.createElement('nav')
@@ -112,9 +57,122 @@ const Header = ()=>{
     $DarkModeSwich.appendChild($DarkModeSwichCircle)
     $Header.appendChild($DarkModeSwich)
 
-    return {
-        componnet:$Header,
-        componnetStyles:styles
-    }  
+    return [$Header,{
+        mobile:`
+        header{
+            background:#eee;
+            position:fixed;
+            bottom:0;
+            left:0;
+            right:0;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            padding:3rem 0 0 0;
+            border-radius:3rem 3rem 0 0;
+        
+        }
+        header>.logo{
+            display:none;
+        }
+        header>nav{
+            width:100%;
+        }
+        header>nav>.menu{
+            display:flex;
+            list-style:none;
+            margin:0;
+            padding:0;
+            justify-content: space-between;
+            padding:0 1rem;
+        }
+        .menu__link{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+            text-decoration:none;
+            color:#2B2C34;
+        }
+        .menu__item{
+            padding:0 0 1rem 0;
+        }
+        .dark-mode__swich{
+            position:absolute;
+            background:red;
+            top:-25%;
+            background:#fff;
+            padding:1rem 1.50rem;
+            border-radius:50%;
+            color:#2B2C34;
+        }
+        .dark-mode__swich>.icon__moon,.icon__sun{
+            font-size:40px;
+            cursor:pointer;
+        }
+        .dark-mode__swich>.icon__moon{
+            display: none;
+        }
+        `,
+        tablet:`
+            .menu__link{
+                font-size:20px;
+            }
+        `,
+        laptop:`
+        header{
+            position:static;
+            border-radius:0;
+            padding:0;
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            padding:1rem;
+        }
+        header>nav{
+            width:auto;
+        }
+        header>nav>.menu{
+            justify-content: center;
+        }
+        .menu__item{
+            padding:0 1rem;
+        }
+        header>.logo{
+            display:inline-block;
+            width:100px;
+        }
+        .dark-mode__swich{
+            position: relative;
+            background:#E45858 ;
+            border-radius:0;
+            padding:0;
+            border-radius:30px;
+            display:flex;
+            justify-content:space-between;
+        }
+        .dark-mode__swich>section{
+            position:absolute;
+            top:0;
+            bottom:0;
+            width:50px;
+            height:50px;
+            background:#fff;
+            border-radius:50%;
+        }
+        .moon-active{
+            left:auto;
+            right:0;
+        }
+        .dark-mode__swich>.icon__moon,.icon__sun{
+            font-size:2rem;
+            color:#fff;
+            padding:10px 1rem;
+        }
+        .dark-mode__swich>.icon__moon{
+            display: inline-block;
+        }
+        `,
+    }]
 }
 export default Header
