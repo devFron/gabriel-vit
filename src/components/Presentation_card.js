@@ -78,6 +78,9 @@ const PresentationCard = ()=>{
                 justify-content:space-between;
                 margin:0 0 10px 0; 
             }
+            .presentation-card__social__media__link{
+                color:#fff;
+            }
             .flag-right{
                 background:#3498DB;
                 display:block;
