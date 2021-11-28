@@ -14,9 +14,9 @@ const ContactForm = ()=>{
         mobile:`
         form{
             background:#E45858;
-            margin:0 1rem 10rem 1rem;
+            margin:0;
             font-family:'Roboto',sans-serif;
-            padding:0 1rem;
+            padding:1rem 1rem 10rem 1rem;
             display:flex;
             flex-direction: column;
             align-items: center;
@@ -26,7 +26,7 @@ const ContactForm = ()=>{
             color:#fff;
         }
         form>section{
-            margin:0;
+            margin:0 0 1rem 0;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -77,6 +77,9 @@ const ContactForm = ()=>{
             }
             form>section>input,textarea{
                 width:40%;
+            }
+            form{
+                padding-bottom:2rem;
             }
         `,
         extraLarge:`
