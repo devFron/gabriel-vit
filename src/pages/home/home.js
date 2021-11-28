@@ -7,10 +7,17 @@ const Home = ()=>{
 
     $Home.appendChild(componentHeader)
     $Home.appendChild(componentPresentationCard)
-
+    const stylesHome = {
+        mobile:`
+            body{
+                background:url(src/assets/background-mobile.png);
+            }
+        `
+    }
     return [
         $Home,
         [
+            stylesHome,
             stylesHeader,
             stylesPresentationCard
         ]
