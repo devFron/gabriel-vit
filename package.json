@@ -4,7 +4,7 @@
   "description": "Porfolio from José Vit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db-server":"node src/helpers/db-server.js"
   },
   "repository": {
     "type": "git",
