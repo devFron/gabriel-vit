@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/devFron/gabriel-vit/issues"
   },
-  "homepage": "https://github.com/devFron/gabriel-vit#readme"
+  "homepage": "https://github.com/devFron/gabriel-vit#readme",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
 }
