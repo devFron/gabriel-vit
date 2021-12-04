@@ -8,12 +8,12 @@ const SkillTwo = ()=>{
         <main>
             <h1 class="title">We are launching <span class="soon">soon!</span></h1>
             <h2 class="subtitle">Suscribe and get notified</h2>
-            <form>
+            <form class="form__disabled">
                 <div>
                     <input type="email" name="email" id="email-address" placeholder="Your email address...">
                     <span class="message__of__input__validation">I'am sorry ocurret an error</span>
                 </div>
-                <button class="">Notify Me</button>
+                <button class="button__disabled">Notify Me</button>
             </form>
             <div class="dashboard__image__box"><img src="src/pages/skills/skill-two/assets-skill/illustration-dashboard.png" alt="dashboard image" class="dashboard__image"></div>
         </main>
