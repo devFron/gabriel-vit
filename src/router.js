@@ -2,6 +2,7 @@ import Home from './pages/home/home.js'
 import Styles from './helpers/vit.js'
 import Loader from './components/Loader.js'
 import SkillOne from './pages/skills/skill-one/skill_one.js'
+import SkillTwo from './pages/skills/skill-two/skill_two.js'
 const Router = async ()=>{
     const {hash} = location
     const $Root = document.getElementById('root')
@@ -34,6 +35,12 @@ const Router = async ()=>{
                 $Root.appendChild(componentSkillOne)
                 $style.innerHTML += Styles(stylesSkillOne)
                 title.textContent = 'skill | huddle-landing-page-with-single-introductory-section-master'
+            break;
+            case `${HashBase}ping-coming-soon-page-master`:
+                const [componentSkillTwo,stylesSkillTwo] = SkillTwo()
+                $Root.appendChild(componentSkillTwo)
+                $style.innerHTML += Styles(stylesSkillTwo)
+                title.textContent = 'skill | ping-coming-soon-page-master'
             break;
         
             default:
