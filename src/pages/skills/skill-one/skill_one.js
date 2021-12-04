@@ -17,7 +17,7 @@ const SkillOne = ()=>{
                     Create connections with your users as you engage in genuine discussion.
                 </p>
             </section>
-            <div class="hunddle__button__box"><button class="button-disabled">Register</button></div>
+            <div class="hunddle__button__box"><button class="button__disabled">Register</button></div>
         </div>
         <section class="hunddle__social-media">
             <i class="fab fa-facebook hunddle__social-media__icon"></i>
