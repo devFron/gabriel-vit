@@ -11,7 +11,7 @@ const SkillTwo = ()=>{
             <form class="form__disabled">
                 <div>
                     <input type="email" name="email" id="email-address" placeholder="Your email address...">
-                    <span class="message__of__input__validation">I'am sorry ocurret an error</span>
+                    <span class="message__of__input__validation"></span>
                 </div>
                 <button class="button__disabled">Notify Me</button>
             </form>
