@@ -1,44 +1,46 @@
 import Logo from '../assets/logo.png'
+import Icon from '../helpers/icons.js'
 const Header = ()=>{
-
     const $Header = document.createElement('header')
     const $Logo = document.createElement('img')
     const $Nav = document.createElement('nav')
     const $Menu = document.createElement('ul')
     const MenuItems = [
         {
-            icon:`<i class="fas fa-home"></i>`,
+            icon:Icon({prefix:'fas',iconName:'home'}),
             link:'#/home',
             content:'Inicio'
         },
         {
-            icon:'<i class="fas fa-align-left"></i>',
+            icon:Icon({prefix:'fas',iconName:'align-left'}),
             link:'#/cv',
             content:'CV'
         },
         {
-            icon:'<i class="fas fa-address-book"></i>',
+            icon:Icon({prefix:'fas',iconName:'address-book'}),
             link:'#/about',
             content:'Sobre'
         },
         {
-            icon:'<i class="fas fa-greater-than-equal"></i>',
+            icon:Icon({prefix:'fas',iconName:'greater-than-equal'}),
             link:'#/blog',
             content:'Blog'
         }
     ]
     const $DarkModeSwich = document.createElement('section')
-    const $DarkModeIconSun = document.createElement('i')
-    const $DarkModeIconMoon = document.createElement('i')
+    const $DarkModeIconSun = document.createElement('section')
+    const $DarkModeIconMoon = document.createElement('section')
     const $DarkModeSwichCircle = document.createElement('section')
-    
+    $DarkModeIconSun.innerHTML = Icon({prefix:'fas',iconName:'sun'})
+    $DarkModeIconMoon.innerHTML = Icon({prefix:'fas',iconName:'moon'})
+
     $Logo.src = `${Logo}`
     $Logo.classList.add('logo')
     $Menu.classList.add('menu')
     $DarkModeSwich.classList.add('dark-mode__swich')
-    $DarkModeIconSun.classList.add('icon__sun','fas','fa-sun')
-    $DarkModeIconMoon.classList.add('icon__moon','fas','fa-moon')
-
+    $DarkModeIconSun.classList.add('icon__sun')
+    $DarkModeIconMoon.classList.add('icon__moon')
+    $DarkModeSwichCircle.classList.add('circle-swich')
     $Header.appendChild($Logo)
     $Nav.appendChild($Menu)
     MenuItems.forEach(el=>{
@@ -46,7 +48,7 @@ const Header = ()=>{
         const $MenuItem = document.createElement('li')
         const $MenuLink = document.createElement('a')
         $MenuLink.href=link
-        $MenuLink.innerHTML = `${icon} ${content} `
+        $MenuLink.innerHTML = `<section class="header__menu__icon">${icon}</section> ${content} `
         $MenuItem.classList.add('menu__item')
         $MenuLink.classList.add('menu__link')
         $MenuItem.appendChild($MenuLink)
@@ -107,11 +109,15 @@ const Header = ()=>{
             border-radius:50%;
             color:#2B2C34;
         }
-        .dark-mode__swich>.icon__moon,.icon__sun{
+        .icon__moon,.icon__sun{
+            display:inline;
+        }
+        .dark-mode__swich>.icon__moon>svg,.icon__sun>svg{
             font-size:40px;
             cursor:pointer;
+            margin:0;
         }
-        .dark-mode__swich>.icon__moon{
+        .dark-mode__swich>.icon__moon>svg{
             display: none;
         }
         `,
@@ -152,7 +158,7 @@ const Header = ()=>{
             display:flex;
             justify-content:space-between;
         }
-        .dark-mode__swich>section{
+        .dark-mode__swich>.circle-swich{
             position:absolute;
             top:0;
             bottom:0;
@@ -165,12 +171,12 @@ const Header = ()=>{
             left:auto;
             right:0;
         }
-        .dark-mode__swich>.icon__moon,.icon__sun{
+        .dark-mode__swich>.icon__moon>svg,.icon__sun>svg{
             font-size:2rem;
             color:#fff;
             padding:10px 1rem;
         }
-        .dark-mode__swich>.icon__moon{
+        .dark-mode__swich>.icon__moon>svg{
             display: inline-block;
         }
         `,
