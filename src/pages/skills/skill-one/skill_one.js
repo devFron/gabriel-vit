@@ -1,11 +1,14 @@
+import Logo from '../../../assets/skill/fronendmentor/skill_01/logo.svg'
+import mockups from '../../../assets/skill/fronendmentor/skill_01/illustration-mockups.svg'
+import backgroundMobile from '../../../assets/skill/fronendmentor/skill_01/bg-mobile.svg'
 const SkillOne = ()=>{
     const $SkillOne = document.createElement('section')
     $SkillOne.classList.add('one-skill-body')
     $SkillOne.innerHTML = `
         <header>
-            <img src="src/pages/skills/skill-one/assets-skill/logo.svg" alt="Hunddle Logo" class="header__logo">
+            <img src="${Logo}" alt="Hunddle Logo" class="header__logo">
         </header>
-        <div><img src="src/pages/skills/skill-one/assets-skill/illustration-mockups.svg" alt="illustration-mockups" class=""></div>
+        <div><img src="${mockups}" alt="illustration-mockups" class=""></div>
 
         <div class="flex-container">
             <section class="hunddle__data">
@@ -28,7 +31,7 @@ const SkillOne = ()=>{
     const SkillOneStyles = {
         mobile:`
         .one-skill-body{
-            background:url(../src/pages/skills/skill-one/assets-skill/bg-mobile.svg),hsl(257, 40%, 49%);
+            background:url(${backgroundMobile}),hsl(257, 40%, 49%);
             padding:0 1rem;
             color:#fff;
             background-repeat:no-repeat;
@@ -103,7 +106,7 @@ const SkillOne = ()=>{
             height: 100vh;
             align-items: center;
             grid-gap:2rem;
-            background:url(../src/pages/skills/skill-one/assets-skill/bg-mobile.svg),hsl(257, 40%, 49%);
+            background:url(${backgroundMobile}),hsl(257, 40%, 49%);
             background-repeat:no-repeat;
             background-size:100%;
     
