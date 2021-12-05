@@ -3,6 +3,7 @@ import Styles from './helpers/vit.js'
 import Loader from './components/Loader.js'
 import SkillOne from './pages/skills/skill-one/skill_one.js'
 import SkillTwo from './pages/skills/skill-two/skill_two.js'
+import SkillThree from './pages/skills/skill-three/skill_three.js'
 const Router = async ()=>{
     const {hash} = location
     const $Root = document.getElementById('root')
@@ -41,6 +42,13 @@ const Router = async ()=>{
                 $Root.appendChild(componentSkillTwo)
                 $style.innerHTML += Styles(stylesSkillTwo)
                 title.textContent = 'skill | ping-coming-soon-page-master'
+            break;
+
+            case `${HashBase}single-price-grid-component-master`:
+                const [componentSkillThree,stylesSkillThree] = SkillThree()
+                $Root.appendChild(componentSkillThree)
+                $style.innerHTML += Styles(stylesSkillThree)
+                title.textContent = 'skill | single-price-grid-component-master'
             break;
         
             default:
