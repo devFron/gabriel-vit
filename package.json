@@ -7,7 +7,7 @@
     "db-server": "node src/helpers/db-server.js",
     "start":"webpack-dev-server --mode development --open --port 3000",
     "dev":"webpack --mode development",
-    "build":"webapck --mode prodution"
+    "build":"webpack --mode production"
   },
   "repository": {
     "type": "git",
