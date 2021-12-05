@@ -5,12 +5,14 @@ module.exports = {
         rules:[
             {
                 test:/\.html$/i,
-                use:{
-                    loader:"html-loader",
-                    options:{
-                        minimize:true
+                use:[
+                    {
+                        loader:"html-loader",
+                        options:{
+                            minimize:true
+                        }
                     }
-                }
+                ]
             },
             {
                 test:/\.css$/i,
@@ -26,12 +28,14 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg|webp)$/i,
-                use:{
-                    loader:"file-loader",
-                    options:{
-                        name:"assets/[name].[ext]"
-                    }   
-                }
+                use:[
+                    {
+                        loader:"file-loader",
+                        options:{
+                            name:"assets/[name].[ext]"
+                        }   
+                    }
+                ]
             }
         ]
     },
