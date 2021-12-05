@@ -19,7 +19,7 @@ module.exports = {
                 use:[
                     {
                         loader:MiniCssExtractPlugin.loader,
-                        option:{
+                        options:{
                             publicPath:"./"
                         },
                     },
@@ -33,7 +33,7 @@ module.exports = {
                         loader:"file-loader",
                         options:{
                             name:"assets/[name].[ext]"
-                        }   
+                        }
                     }
                 ]
             }
