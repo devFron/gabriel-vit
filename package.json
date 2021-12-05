@@ -4,7 +4,8 @@
   "description": "Porfolio from José Vit",
   "main": "index.js",
   "scripts": {
-    "db-server": "node src/helpers/db-server.js"
+    "db-server": "node src/helpers/db-server.js",
+    "start":"webpack-dev-server --mode development --open --port 3000"
   },
   "repository": {
     "type": "git",
