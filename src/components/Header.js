@@ -1,4 +1,4 @@
-import Logo from '../assets/logo.png'
+import Logo from '../assets/personal/logo.png'
 import Icon from '../helpers/icons.js'
 const Header = ()=>{
     const $Header = document.createElement('header')

@@ -1,4 +1,4 @@
-import PerfilPhoto from "../assets/perfil-photo-radius.png"
+import PerfilPhoto from "../assets/personal/perfil-photo-radius.png"
 const PresentationCard = ()=>{
 
     const PresentationCard = document.createElement('section')
