@@ -1,3 +1,4 @@
+import Logo from '../assets/logo.png'
 const Header = ()=>{
 
     const $Header = document.createElement('header')
@@ -30,8 +31,8 @@ const Header = ()=>{
     const $DarkModeIconSun = document.createElement('i')
     const $DarkModeIconMoon = document.createElement('i')
     const $DarkModeSwichCircle = document.createElement('section')
-
-    $Logo.src = '../src/assets/logo.png'
+    
+    $Logo.src = `${Logo}`
     $Logo.classList.add('logo')
     $Menu.classList.add('menu')
     $DarkModeSwich.classList.add('dark-mode__swich')

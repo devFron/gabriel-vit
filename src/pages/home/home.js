@@ -1,6 +1,7 @@
 import Header from '../../components/Header.js'
 import PresentationCard from '../../components/Presentation_card.js'
 import Footer from '../../components/Footer.js'
+import backgroundMobile from '../../assets/background-mobile.png'
 const Home = ()=>{
     const $Home = document.createElement('section')
     const [componentHeader,stylesHeader] = Header()
@@ -12,7 +13,7 @@ const Home = ()=>{
     const stylesHome = {
         mobile:`
             body{
-                background:url(src/assets/background-mobile.png);
+                background:url(${backgroundMobile});
             }
         `
     }

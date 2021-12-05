@@ -1,9 +1,10 @@
+import PerfilPhoto from "../assets/perfil-photo-radius.png"
 const PresentationCard = ()=>{
 
     const PresentationCard = document.createElement('section')
     PresentationCard.classList.add('presentation-card')
     PresentationCard.innerHTML = `
-        <img src="src/assets/perfil-photo-radius.png" alt="Perfil photo" class="presentation-card__picture">
+        <img src="${PerfilPhoto}" alt="Perfil photo" class="presentation-card__picture">
         <section class="presentation-card__data">
             <section class="presentation-card__data__header">
                 <p class="presentation-card__data__name">
