@@ -1,9 +1,9 @@
 import Home from './pages/home/home.js'
 import Styles from './helpers/vit.js'
 import Loader from './components/Loader.js'
-import SkillOne from './pages/skills/skill-one/skill_one.js'
-import SkillTwo from './pages/skills/skill-two/skill_two.js'
-import SkillThree from './pages/skills/skill-three/skill_three.js'
+import SkillOne from './pages/skills/skill-01/skill_one.js'
+import SkillTwo from './pages/skills/skill-02/skill_two.js'
+import SkillThree from './pages/skills/skill-03/skill_three.js'
 const Router = async ()=>{
     const {hash} = location
     const $Root = document.getElementById('root')
