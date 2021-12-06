@@ -1,9 +1,11 @@
+import Logo from '../../../assets/skill/fronendmentor/skill_02/logo_02.svg'
+import DashboardsImage from '../../../assets/skill/fronendmentor/skill_02/illustration-dashboard.png'
 const SkillTwo = ()=>{
     const $SkillTwo = document.createElement('section')
     $SkillTwo.classList.add('skill-two')
     $SkillTwo.innerHTML = `
         <header>
-            <img src="src/pages/skills/skill-two/assets-skill/logo.svg" alt="logo of ping-comming-soon-page-master" class="logo">
+            <img src="${Logo}" alt="logo of ping-comming-soon-page-master" class="logo">
         </header>
         <main>
             <h1 class="title">We are launching <span class="soon">soon!</span></h1>
@@ -15,7 +17,7 @@ const SkillTwo = ()=>{
                 </div>
                 <button class="button__disabled">Notify Me</button>
             </form>
-            <div class="dashboard__image__box"><img src="src/pages/skills/skill-two/assets-skill/illustration-dashboard.png" alt="dashboard image" class="dashboard__image"></div>
+            <div class="dashboard__image__box"><img src="${DashboardsImage}" alt="dashboard image" class="dashboard__image"></div>
         </main>
 
         <footer>
